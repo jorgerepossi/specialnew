@@ -24,7 +24,7 @@ $template::TopHeader();
     //  Header
     $template::Header();
 
-    $template->render('includes/carousel-hero/index');
+                    $template->render('includes/carousel-hero/index');
 
     // Footer
     $template::Footer();
