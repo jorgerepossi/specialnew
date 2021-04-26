@@ -1,0 +1,37 @@
+@import "../queries/media-queries";
+@import "../mixins/mixins";
+@import "reset.scss";
+@import "normalize.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* clases generales */
+.container {
+    width: 100%;
+
+    & {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    & {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @include mq(small) {
+        width: 1400px;
+    }
+}
+.flex{
+    @include dflex;
+
+}
+/* fin clases generales */

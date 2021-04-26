@@ -1,0 +1,9 @@
+@import '../colors/colors';
+
+:root{
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --system-color-#{$color}-#{$shade}: #{$value};
+        }
+    }
+}
