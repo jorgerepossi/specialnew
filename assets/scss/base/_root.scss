@@ -1,0 +1,16 @@
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --system-color-#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}

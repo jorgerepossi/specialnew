@@ -1,0 +1,49 @@
+{
+  "name": "specialnew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss assets/scss/estilos.scss assets/css/estilos.css",
+    "w": "nodemon -e scss -x \"npm run build-css\"",
+    "prepare": "husky install",
+    "format": "prettier --write \"./**/*.{css,scss,html,js,json}\"",
+    "lint-staged": "lint-staged",
+    "pre-commit": "pretty-quick --stagged",
+    "postcommit": "git update-index -g",
+    "go": "npm run format --lint-staged --pre-commit --postcommit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgerepossi/specialnew.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorgerepossi/specialnew/issues"
+  },
+  "homepage": "https://github.com/jorgerepossi/specialnew#readme",
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "sass": "^1.32.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js, json,css,scss,md,html}": [
+      "prettier --single-quote --write",
+      "git add .",
+      "npm run lint",
+      "npm run format"
+    ]
+  }
+}
