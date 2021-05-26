@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 /**
  * 
  * 
  */
-include('/includes/templates/index.php');
+include 'includes/templates/index.php';

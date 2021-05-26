@@ -1,8 +1,10 @@
 <?php
 
-include '../layouts/Layout.php';
 include 'default-constant.php';
-include '../functions/index.php';
+
+include   realpath(__DIR__ . DIRECTORY_SEPARATOR . '../') . '/layouts/Layout.php';
+
+include   realpath(__DIR__ . DIRECTORY_SEPARATOR . '../') . '/functions/index.php';
 
 $template = new Layout;
 ?>
@@ -16,6 +18,5 @@ $template->render('includes/carousel-hero/index');
 
 // Footer
 get_footer();
-
 ?>
-</body>
+ 
