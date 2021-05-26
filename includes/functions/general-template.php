@@ -10,7 +10,8 @@
  * 
  * Base $name Header.php
  * @param string
- * */
+ *
+*/
 
 
 
@@ -55,8 +56,6 @@ function get_footer($name = null)
     } else {
         $footer = 'Footer.php';
     }
-
-
     $root = realpath(__DIR__ . DIRECTORY_SEPARATOR . '../') . TEMPLATEPATH . $footer;
 
 
