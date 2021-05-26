@@ -24,7 +24,7 @@ function get_header($name = null)
     } else {
         $header = 'Header.php';
     }
-    $error =  '<div class="alert"> ¡Hubo un error inesperado! </div>';
+                    $error =  '<div class="alert"> ¡Hubo un error inesperado! </div>';
     $root = realpath(__DIR__ . DIRECTORY_SEPARATOR . '../') . TEMPLATEPATH . $header;
      if (!file_exists($root)) {
         echo $error;
