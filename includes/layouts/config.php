@@ -1,4 +1,4 @@
 <?php
 
-define("BASE_URL", "http://localhost:8888/specialnew/");
+define("BASE_URL", "http://localhost:8888/special");
 

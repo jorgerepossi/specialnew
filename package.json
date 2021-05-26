@@ -11,7 +11,7 @@
     "lint-staged": "lint-staged",
     "pre-commit": "pretty-quick --stagged",
     "postcommit": "git update-index -g",
-    "go": "npm run format && npm run  lint-staged  && npm run pre-commit  && npm run postcommit"
+    "dev": "npm run format && npm run  lint-staged  && npm run pre-commit  && npm run postcommit"
   },
   "repository": {
     "type": "git",

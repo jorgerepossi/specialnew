@@ -3,7 +3,7 @@ class Layout
 {
     private $root;
     // protected $getContent;
-   
+
 
     public static function getContent($getContent)
     {
@@ -18,7 +18,7 @@ class Layout
 
     public static function TopHeader()
     {
-        $root = realpath(__DIR__ . DIRECTORY_SEPARATOR . '..').'/layouts/metasLink.php';
+        $root = realpath(__DIR__ . DIRECTORY_SEPARATOR . '..') . '/layouts/metasLink.php';
         if (file_exists($root)) {
             $contents = file_get_contents($root);
             eval(' ?>' . $contents . '<?php ');
@@ -29,8 +29,8 @@ class Layout
 
     public static function HeroPage()
     {
-        $root = realpath(__DIR__ . DIRECTORY_SEPARATOR . '..').'/PageHeader.php';
-        $respuesta = self::getContent($root) ;
+        $root = realpath(__DIR__ . DIRECTORY_SEPARATOR . '..') . '/PageHeader.php';
+        $respuesta = self::getContent($root);
         if ($respuesta != false) {
             return $respuesta;
         } else {
@@ -49,11 +49,11 @@ class Layout
     }
 
 
-    
 
-   
 
-    public static function Header()
+
+
+    /*  public static function Header()
     {
         $root = realpath(__DIR__ . DIRECTORY_SEPARATOR . '..').'/layouts/Header.php';
         if (file_exists($root)) {
@@ -63,7 +63,7 @@ class Layout
             echo '<b>Algo salió mal!<b>';
         }
     }
-
+ */
 
     public function render($template_name)
     {
@@ -73,11 +73,11 @@ class Layout
             $contents = file_get_contents($path);
             eval(' ?>' . $contents . '<?php ');
         } else {
-            echo(' file not found');
+            echo (' file not found');
         }
     }
 
-    public static function Footer()
+    /*   public static function Footer()
     {
         $root = realpath(__DIR__ . DIRECTORY_SEPARATOR . '..').'/layouts/Footer.php';
         if (file_exists($root)) {
@@ -87,12 +87,12 @@ class Layout
             echo 'Algo salió mal';
         }
     }
-
+ */
 
     public static function FormVehiculos()
     {
-        $root = realpath(__DIR__ . DIRECTORY_SEPARATOR . '..').'/form/FormVehiculosContent.php';
-        $respuesta = self::getContent($root) ;
+        $root = realpath(__DIR__ . DIRECTORY_SEPARATOR . '..') . '/form/FormVehiculosContent.php';
+        $respuesta = self::getContent($root);
         if ($respuesta != false) {
             return $respuesta;
         } else {
@@ -117,7 +117,7 @@ class Layout
             // End buffering and return its contents
             $output = ob_get_clean();
         }
-   
+
         return $output;
     }
 }
